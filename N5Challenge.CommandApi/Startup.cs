@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using N5Challenge.CommandApi.Services;
 using N5Challenge.Domain.UnitOfWork;
 using N5Challenge.Infrastructure;
 using N5Challenge.Infrastructure.UnitOfWork;
@@ -25,7 +26,6 @@ namespace N5Challenge.CommandApi
         {
 
             string conexion = Configuration.GetConnectionString("n5-challenge").ToString() ?? "";
-            //services.AddDbContext<ApiContext>(opt => opt.UseSqlServer(conexion));
             services.AddDbContext<N5ChallengeContext>(opt => opt.UseSqlServer(conexion, x => x.MigrationsAssembly("N5Challenge.Infrastructure")));
 
             services.AddControllers();
@@ -35,6 +35,7 @@ namespace N5Challenge.CommandApi
             });
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ITypeService, TypeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
