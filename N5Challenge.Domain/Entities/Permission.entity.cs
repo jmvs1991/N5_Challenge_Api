@@ -19,5 +19,12 @@ namespace N5Challenge.Domain.Entities
         [Required]
         [Column("FechaPermiso", TypeName = "datetime")]
         public DateTime DateOfPermission { get; set; }
+
+        [Required]
+        [Column("TipoPermiso")]
+        public long TypeId { get; set; }
+
+        [ForeignKey("TypeId")]
+        public virtual TypeEntity Type { get; set; }
     }
 }
