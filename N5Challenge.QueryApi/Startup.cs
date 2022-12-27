@@ -37,6 +37,7 @@ namespace N5Challenge.QueryApi
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<ITypeService, TypeService>();
+            services.AddTransient<IPermissionService, PermissionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
