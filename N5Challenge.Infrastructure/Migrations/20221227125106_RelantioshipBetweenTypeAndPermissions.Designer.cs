@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using N5Challenge.Infrastructure;
 
@@ -11,9 +12,11 @@ using N5Challenge.Infrastructure;
 namespace N5Challenge.Infrastructure.Migrations
 {
     [DbContext(typeof(N5ChallengeContext))]
-    partial class N5ChallengeContextModelSnapshot : ModelSnapshot
+    [Migration("20221227125106_RelantioshipBetweenTypeAndPermissions")]
+    partial class RelantioshipBetweenTypeAndPermissions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
