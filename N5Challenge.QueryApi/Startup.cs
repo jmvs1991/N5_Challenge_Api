@@ -22,6 +22,8 @@ namespace N5Challenge.QueryApi
 
         public IConfiguration Configuration { get; }
 
+        readonly string MyAllowSpecificOrigins = "_N5ChallengeQueryCors";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -33,6 +35,17 @@ namespace N5Challenge.QueryApi
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "N5Challenge.QueryApi", Version = "v1" });
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.AllowAnyOrigin()
+                                             .AllowAnyHeader()
+                                             .AllowAnyMethod();
+                                  });
             });
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
@@ -55,6 +68,8 @@ namespace N5Challenge.QueryApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
