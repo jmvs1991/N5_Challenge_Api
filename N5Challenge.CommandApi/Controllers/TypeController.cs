@@ -18,19 +18,19 @@ namespace N5Challenge.CommandApi.Controllers
         }
         
         [HttpPost]
-        public async Task AddBook([FromBody] TypeDTO type)
+        public async Task AddType([FromBody] TypeDTO type)
         {
             await _typeService.AddType(type);
         }
 
         [HttpPut("{id}")]
-        public async Task UpdateBook(long id, [FromBody] TypeDTO type)
+        public async Task UpdateType(long id, [FromBody] TypeDTO type)
         {
             await _typeService.UpdateType(id, type);
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteBook(long id)
+        public async Task DeleteType(long id)
         {
             await _typeService.DeleteType(id);
         }
