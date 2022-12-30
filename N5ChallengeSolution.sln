@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N5Challenge.QueryApi", "N5Challenge.QueryApi\N5Challenge.QueryApi.csproj", "{26E6CA84-9411-4000-913B-F255210D67E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N5Challenge.QueryApi", "N5Challenge.QueryApi\N5Challenge.QueryApi.csproj", "{26E6CA84-9411-4000-913B-F255210D67E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N5Challenge.CommandApi", "N5Challenge.CommandApi\N5Challenge.CommandApi.csproj", "{70866359-E81D-46F3-BBD6-7570C598F485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N5Challenge.CommandApi", "N5Challenge.CommandApi\N5Challenge.CommandApi.csproj", "{70866359-E81D-46F3-BBD6-7570C598F485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N5Challenge.Domain", "N5Challenge.Domain\N5Challenge.Domain.csproj", "{D19A0CEF-5371-4900-84F3-1400777815CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N5Challenge.Domain", "N5Challenge.Domain\N5Challenge.Domain.csproj", "{D19A0CEF-5371-4900-84F3-1400777815CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N5Challenge.Infrastructure", "N5Challenge.Infrastructure\N5Challenge.Infrastructure.csproj", "{61D13698-9AA0-4CAE-8398-3766BCD35642}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "N5Challenge.Infrastructure", "N5Challenge.Infrastructure\N5Challenge.Infrastructure.csproj", "{61D13698-9AA0-4CAE-8398-3766BCD35642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N5Challenge.Test", "N5Challenge.Test\N5Challenge.Test.csproj", "{7CBA4498-D1BB-430F-899D-25BA2518D5CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{61D13698-9AA0-4CAE-8398-3766BCD35642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D13698-9AA0-4CAE-8398-3766BCD35642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D13698-9AA0-4CAE-8398-3766BCD35642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBA4498-D1BB-430F-899D-25BA2518D5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBA4498-D1BB-430F-899D-25BA2518D5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBA4498-D1BB-430F-899D-25BA2518D5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBA4498-D1BB-430F-899D-25BA2518D5CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

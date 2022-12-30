@@ -18,19 +18,19 @@ namespace N5Challenge.CommandApi.Controllers
         }
 
         [HttpPost]
-        public async Task AddBook([FromBody] PermissionDTO permission)
+        public async Task AddPermission([FromBody] PermissionDTO permission)
         {
             await _permissionService.AddPermission(permission);
         }
 
         [HttpPut("{id}")]
-        public async Task UpdateBook(long id, [FromBody] PermissionDTO permission)
+        public async Task UpdatePermission(long id, [FromBody] PermissionDTO permission)
         {
             await _permissionService.UpdatePermission(id, permission);
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteBook(long id)
+        public async Task DeletePermission(long id)
         {
             await _permissionService.DeletePermission(id);
         }
